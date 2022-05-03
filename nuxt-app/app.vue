@@ -1,5 +1,10 @@
 <template>
   <div>
-    <NuxtWelcome />
+    <NuxtLogo/>
+    <TheNavbar />
   </div>
 </template>
+<script>export default {
+  components: {}
+}
+</script>
