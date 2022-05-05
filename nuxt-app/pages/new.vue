@@ -7,7 +7,7 @@
     </div>
 
     <div class="form-control">
-      <label for="date">Дата дедлайна</label>
+      <label for="date">Дедлайн</label>
       <input type="date" id="date" v-model.trim="task.deadline">
     </div>
 
@@ -23,30 +23,30 @@
 
 <script setup>
 
-const router = useRouter()
-const store = useStore()
 
-const task = reactive({
+import {useState} from "nuxt/app";
+import moment from "moment";
+
+const task = useState('task', () => ({
   title: '',
   deadline: '',
   description: '',
   status: 'active'
-})
+}));
 
-const isValid = computed(() => {
-  return !Object.values(task).includes('')
-})
+const isValid = () => !Object.values(task.value).includes('');
 
 
 const createTask = () => {
-  if (isValid.value) {
-    task.id = Date.now()
+  if (isValid()) {
+    task.value.id = Date.now();
 
-    task.status = moment(task.deadline).unix() >= moment().startOf('day').unix() ? 'active' : 'cancelled'
+   task.value.status = moment(task.value.deadline).unix() >= moment().startOf('day').unix() ? 'active' : 'cancelled'
 
-    store.commit('addNewTask', task)
+    console.log(task.value);
 
-    router.push('/')
+
+    //router.push('/')
   }
 }
 </script>

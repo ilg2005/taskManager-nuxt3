@@ -1,4 +1,5 @@
 <template>
+  <div class="container">
     <nav class="navbar">
       <h3>
         Task Manager
@@ -18,8 +19,15 @@
         </li>
       </ul>
     </nav>
+  </div>
 </template>
 
 <script setup>
 import {statusMap} from "@/components/AppStatus";
 </script>
+
+<style scoped>
+.container {
+  margin-bottom: 5rem;
+}
+</style>

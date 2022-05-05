@@ -1,5 +1,5 @@
 <template>
-  <h1 class="text-white center mt-5" >Задач пока нет</h1>
+  <h1 class="text-white center" >Задач пока нет</h1>
 </template>
 
 <script>
@@ -8,8 +8,4 @@ export default {
 }
 </script>
 
-<style scoped>
-.mt-5 {
-  margin-top: 5rem;
-}
-</style>
+
