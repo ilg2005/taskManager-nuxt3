@@ -23,9 +23,8 @@
 
 <script setup>
 
-
+import moment from 'moment';
 import {useState} from "nuxt/app";
-import moment from "moment";
 
 const task = useState('task', () => ({
   title: '',
