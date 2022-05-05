@@ -23,9 +23,8 @@
 
 <script setup>
 
-
-import {useState} from "nuxt/app";
-import moment from "moment";
+import moment from 'moment';
+import {navigateTo, useState} from "nuxt/app";
 
 const task = useState('task', () => ({
   title: '',
@@ -34,6 +33,8 @@ const task = useState('task', () => ({
   status: 'active'
 }));
 
+const tasks = useState('tasks', () => ([]));
+
 const isValid = () => !Object.values(task.value).includes('');
 
 
@@ -41,12 +42,12 @@ const createTask = () => {
   if (isValid()) {
     task.value.id = Date.now();
 
-   task.value.status = moment(task.value.deadline).unix() >= moment().startOf('day').unix() ? 'active' : 'cancelled'
+    task.value.status = moment(task.value.deadline).unix() >= moment().startOf('day').unix() ? 'active' : 'cancelled'
 
-    console.log(task.value);
+    tasks.value.push(task.value);
+    localStorage.setItem('tasks', JSON.stringify(tasks.value));
 
-
-    //router.push('/')
+    navigateTo('/');
   }
 }
 </script>
