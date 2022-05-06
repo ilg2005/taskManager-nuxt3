@@ -48,7 +48,7 @@ const createTask = () => {
     task.value = {};
     localStorage.setItem('tasks', JSON.stringify(tasks.value));
 
-  //  navigateTo('/');
+    navigateTo('/');
   }
 }
 </script>
