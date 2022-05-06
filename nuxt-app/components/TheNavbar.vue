@@ -7,7 +7,7 @@
 
       <ul class="navbar-menu">
         <li>
-          <router-link to="/">Все задачи</router-link>
+          <NuxtLink to="/">Все задачи</NuxtLink>
         </li>
         <li v-for="(item, i) in statusMap"
             :key="i"

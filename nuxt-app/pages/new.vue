@@ -35,17 +35,18 @@ const task = useState('task', () => ({
 
 const tasks = useState('tasks', () => ([]));
 
-const isValid = () => !Object.values(task.value).includes('');
+const isValid = computed(() => !Object.values(task.value).includes(''));
 
 
 const createTask = () => {
-  if (isValid()) {
+  if (isValid.value) {
     task.value.id = Date.now();
 
     task.value.status = moment(task.value.deadline).unix() >= moment().startOf('day').unix() ? 'active' : 'cancelled'
 
     tasks.value.push(task.value);
     task.value = {};
+    task.value.title = '';
     localStorage.setItem('tasks', JSON.stringify(tasks.value));
 
     navigateTo('/');
