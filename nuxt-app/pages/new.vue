@@ -45,9 +45,10 @@ const createTask = () => {
     task.value.status = moment(task.value.deadline).unix() >= moment().startOf('day').unix() ? 'active' : 'cancelled'
 
     tasks.value.push(task.value);
+    task.value = {};
     localStorage.setItem('tasks', JSON.stringify(tasks.value));
 
-    navigateTo('/');
+  //  navigateTo('/');
   }
 }
 </script>
