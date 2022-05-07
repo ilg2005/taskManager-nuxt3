@@ -2,7 +2,7 @@
   <div class="card" v-if="selectedTask">
     <h2>{{ selectedTask.title }}</h2>
     <p><strong>Статус</strong>:
-      <AppStatus :type="selectedTask.status"/>
+      <AppStatus :type="selectedTask.status" :key="statusChanged"/>
     </p>
     <p><strong>Дедлайн</strong>: {{ new Date(selectedTask.deadline).toLocaleDateString() }}</p>
     <p><strong>Описание</strong>: {{ selectedTask.description }}</p>
@@ -19,7 +19,7 @@
 
 <script setup>
 
-import {useRoute, useState} from "nuxt/app";
+import {useRoute} from "nuxt/app";
 
 const route = useRoute();
 const id = +route.params.id;
@@ -27,8 +27,12 @@ const id = +route.params.id;
 const tasks = computed(() => JSON.parse(localStorage.getItem('tasks')));
 const selectedTask = tasks.value.find(task => task.id === id);
 
+const statusChanged = ref(0);
+
 const changeStatus = (status) => {
- // store.commit('changeSelectedTaskStatus', {id, status})
+  tasks.value.find((task) => task.id === id).status = status;
+  localStorage.setItem('tasks', JSON.stringify(tasks.value));
+  statusChanged.value++;
 }
 
 </script>
