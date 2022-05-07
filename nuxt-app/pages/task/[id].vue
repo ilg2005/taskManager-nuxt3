@@ -27,12 +27,11 @@ import {useRoute} from "nuxt/app";
 const route = useRoute();
 const id = +route.params.id;
 
-const tasks = ref();
 const selectedTask = ref();
 
 const isLoading = computed(() => {
-  tasks.value = JSON.parse(localStorage.getItem('tasks'));
-  selectedTask.value = tasks.value.find(task => task.id === id);
+  const tasks = JSON.parse(localStorage.getItem('tasks'));
+  selectedTask.value = tasks.find(task => task.id === id);
   return typeof window === 'undefined';
 });
 
