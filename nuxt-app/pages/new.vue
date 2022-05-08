@@ -33,7 +33,7 @@ const task = useState('task', () => ({
   status: 'active'
 }));
 
-const tasks = useState('tasks', () => ([]));
+const tasks = useState('allTasks', () => ([]));
 
 const isValid = computed(() => !Object.values(task.value).includes(''));
 

@@ -1,6 +1,10 @@
 <template>
   <div>
-    <h1 class="text-white center" v-if="!allTasks.length">Задач пока нет</h1>
+    <div v-if="!allTasks.length">
+      <h1 class="text-white center">Задач пока нет <br>
+        <NuxtLink to="/new" class="new">Создать новую?</NuxtLink>
+      </h1>
+    </div>
     <div v-else>
       <h3 class="text-white">Всего {{ statusAdjective }} задач: {{ tasks.length }}</h3>
       <task-card v-for="task of tasks"
@@ -24,5 +28,8 @@ const tasks = computed(() => props.status === 'all' ? allTasks.value :
 </script>
 
 <style scoped>
-
+a.new {
+  color: #89a9ef;
+  font-size: 1.5rem;
+}
 </style>
