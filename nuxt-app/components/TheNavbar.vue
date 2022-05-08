@@ -1,5 +1,4 @@
 <template>
-  <div class="container">
     <nav class="navbar">
       <div class="title">
         <img src="/nuxt-js.svg" alt="Logo" class="logo">
@@ -20,7 +19,6 @@
         </li>
       </ul>
     </nav>
-  </div>
 </template>
 
 <script setup>
@@ -28,9 +26,7 @@ import {statusMap} from "@/components/AppStatus";
 </script>
 
 <style scoped>
-.container {
-  margin-bottom: 5rem;
-}
+
 .logo {
   margin-right: 1rem;
   width: 60px;

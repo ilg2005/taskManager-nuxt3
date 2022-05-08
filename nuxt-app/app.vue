@@ -6,7 +6,7 @@
       <Link rel="shortcut icon" href="/icon_64x64.a3b4ce.png" as="favicon"/>
     </Head>
     <TheNavbar/>
-    <NuxtPage/>
+    <NuxtPage class="container"/>
   </div>
 </template>
 
@@ -21,4 +21,8 @@ useState('allTasks', () => computed(() => {
 }));
 </script>
 
-
+<style >
+.container {
+  margin-top: 5rem;
+}
+</style>
