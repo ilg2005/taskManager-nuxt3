@@ -1,9 +1,10 @@
 <template>
   <div class="container">
     <nav class="navbar">
-      <h3>
-        Task Manager
-      </h3>
+      <div class="title">
+        <img src="/nuxt-js.svg" alt="Logo" class="logo">
+        <h3>Task Manager</h3>
+      </div>
 
       <ul class="navbar-menu">
         <li>
@@ -29,5 +30,15 @@ import {statusMap} from "@/components/AppStatus";
 <style scoped>
 .container {
   margin-bottom: 5rem;
+}
+.logo {
+  margin-right: 1rem;
+  width: 60px;
+}
+
+.title {
+  display: flex;
+  justify-items: center;
+  margin: 1rem;
 }
 </style>

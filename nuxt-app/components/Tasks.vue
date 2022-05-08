@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="container">
     <div v-if="!allTasks.length">
       <h1 class="text-white center">Задач пока нет <br>
         <NuxtLink to="/new" class="new">Создать новую?</NuxtLink>
