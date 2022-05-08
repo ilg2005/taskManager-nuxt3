@@ -1,14 +1,4 @@
 <template>
-  <Tasks :tasks="tasks"/>
+  <Tasks status="cancelled"/>
 </template>
 
-<script setup>
-
-const tasks = computed(() => {
-  if (typeof window !== 'undefined') {
-    return JSON.parse(localStorage.getItem('tasks')).filter(task => task.status === 'cancelled') ?? [];
-  }
-});
-
-
-</script>

@@ -11,7 +11,14 @@
 </template>
 
 <script setup>
+import {useState} from "nuxt/app";
+
 const title = 'Task Manager';
+useState('allTasks', () => computed(() => {
+  if (typeof window !== 'undefined') {
+    return JSON.parse(localStorage.getItem('tasks')) ?? [];
+  }
+}));
 </script>
 
 
