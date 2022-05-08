@@ -6,7 +6,7 @@
 
 const tasks = computed(() => {
   if (typeof window !== 'undefined') {
-    return JSON.parse(localStorage.getItem('tasks')) ?? [];
+    return JSON.parse(localStorage.getItem('tasks')).filter(task => task.status === 'pending') ?? [];
   }
 });
 

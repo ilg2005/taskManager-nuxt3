@@ -12,7 +12,7 @@
         <li v-for="(item, i) in statusMap"
             :key="i"
         >
-          <router-link :to="`/${i}`">{{ item.navTitle }}</router-link>
+          <NuxtLink :to="`/${i}`">{{ item.navTitle }}</NuxtLink>
         </li>
         <li>
           <router-link to="/new">Создать</router-link>
