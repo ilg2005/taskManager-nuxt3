@@ -5,5 +5,11 @@ export default defineNuxtConfig({
     css: ['@/assets/theme.css'],
     build: {
         transpile: ['moment']
+    },
+    router: {
+        options: {
+            linkActiveClass: 'active',
+            linkExactActiveClass: 'active'
+        }
     }
 })
