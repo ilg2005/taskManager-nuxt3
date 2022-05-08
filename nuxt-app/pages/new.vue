@@ -33,12 +33,10 @@ const task = useState('task', () => ({
   status: 'active'
 }));
 
-const tasks = useState('allTasks', () => ([]));
-
 const isValid = computed(() => !Object.values(task.value).includes(''));
 
-
 const createTask = () => {
+  const tasks = useState('allTasks');
   if (isValid.value) {
     task.value.id = Date.now();
 
