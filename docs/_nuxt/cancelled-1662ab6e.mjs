@@ -1,1 +1,0 @@
-import{_ as e}from "../../nuxt-app/.output/public/_nuxt/Tasks-a0ef873c.mjs";import{_ as o,o as n,c as t}from "../../nuxt-app/.output/public/_nuxt/entry-9ef2c190.mjs";const _={};function a(r, s){const c=e;return n(),t(c,{status:"cancelled"})}var m=o(_,[["render",a]]);export{m as default};
