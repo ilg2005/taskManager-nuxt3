@@ -1,1 +1,0 @@
-import{_ as o}from"./Tasks-a0ef873c.mjs";import{_ as e,o as t,c as _}from"./entry-9ef2c190.mjs";const c={};function r(s,a){const n=o;return t(),_(n,{status:"pending"})}var m=e(c,[["render",r]]);export{m as default};

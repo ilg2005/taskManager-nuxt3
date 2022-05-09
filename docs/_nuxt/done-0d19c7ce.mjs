@@ -1,0 +1,1 @@
+import{_ as e}from "../../nuxt-app/.output/public/_nuxt/Tasks-a0ef873c.mjs";import{_ as n,o as t,c as _}from "../../nuxt-app/.output/public/_nuxt/entry-9ef2c190.mjs";const c={};function r(s, a){const o=e;return t(),_(o,{status:"done"})}var p=n(c,[["render",r]]);export{p as default};
