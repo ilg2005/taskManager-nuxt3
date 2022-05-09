@@ -1,0 +1,1 @@
+import{_ as e}from"./Tasks-a0ef873c.mjs";import{_ as o,o as n,c as t}from"./entry-9ef2c190.mjs";const _={};function a(r,s){const c=e;return n(),t(c,{status:"cancelled"})}var m=o(_,[["render",a]]);export{m as default};
