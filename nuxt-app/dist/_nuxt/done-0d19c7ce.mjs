@@ -1,0 +1,1 @@
+import{_ as e}from"./Tasks-a0ef873c.mjs";import{_ as n,o as t,c as _}from"./entry-9ef2c190.mjs";const c={};function r(s,a){const o=e;return t(),_(o,{status:"done"})}var p=n(c,[["render",r]]);export{p as default};
