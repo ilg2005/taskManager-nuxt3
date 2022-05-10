@@ -22,7 +22,7 @@
 
 <script setup>
 
-import {useRoute} from "nuxt/app";
+import {useRoute, useState} from "nuxt/app";
 
 const route = useRoute();
 const id = +route.params.id;
@@ -38,9 +38,12 @@ const isLoading = computed(() => {
 
 const statusChanged = ref(0);
 
+
 const changeStatus = (status) => {
   tasks.value.find((task) => task.id === id).status = status;
   localStorage.setItem('tasks', JSON.stringify(tasks.value));
+  const allTasks = useState('allTasks');
+  allTasks.value.find((task) => task.id === id).status = status;
   statusChanged.value++;
 }
 
