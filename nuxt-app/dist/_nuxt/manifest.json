@@ -1,6 +1,6 @@
 {
   "node_modules/nuxt/dist/app/entry.mjs": {
-    "file": "entry-9ef2c190.mjs",
+    "file": "entry-4ab5e9c7.mjs",
     "src": "node_modules/nuxt/dist/app/entry.mjs",
     "isEntry": true,
     "dynamicImports": [
@@ -17,49 +17,49 @@
     ]
   },
   "pages/active.vue": {
-    "file": "active-d4bded5c.mjs",
+    "file": "active-10b3e2a7.mjs",
     "src": "pages/active.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_Tasks-a0ef873c.mjs",
+      "_Tasks-451a83c7.mjs",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
-  "_Tasks-a0ef873c.mjs": {
-    "file": "Tasks-a0ef873c.mjs",
+  "_Tasks-451a83c7.mjs": {
+    "file": "Tasks-451a83c7.mjs",
     "imports": [
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/cancelled.vue": {
-    "file": "cancelled-1662ab6e.mjs",
+    "file": "cancelled-e3715ad4.mjs",
     "src": "pages/cancelled.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_Tasks-a0ef873c.mjs",
+      "_Tasks-451a83c7.mjs",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/done.vue": {
-    "file": "done-0d19c7ce.mjs",
+    "file": "done-3d50e204.mjs",
     "src": "pages/done.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_Tasks-a0ef873c.mjs",
+      "_Tasks-451a83c7.mjs",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/index.vue": {
-    "file": "index-cdb090e0.mjs",
+    "file": "index-2bd1561c.mjs",
     "src": "pages/index.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_Tasks-a0ef873c.mjs",
+      "_Tasks-451a83c7.mjs",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/new.vue": {
-    "file": "new-f11469d5.mjs",
+    "file": "new-58e8d702.mjs",
     "src": "pages/new.vue",
     "isDynamicEntry": true,
     "imports": [
@@ -67,16 +67,16 @@
     ]
   },
   "pages/pending.vue": {
-    "file": "pending-a51fb721.mjs",
+    "file": "pending-3800f1f0.mjs",
     "src": "pages/pending.vue",
     "isDynamicEntry": true,
     "imports": [
-      "_Tasks-a0ef873c.mjs",
+      "_Tasks-451a83c7.mjs",
       "node_modules/nuxt/dist/app/entry.mjs"
     ]
   },
   "pages/task/[id].vue": {
-    "file": "_id_-04ce98d2.mjs",
+    "file": "_id_-7f7b190a.mjs",
     "src": "pages/task/[id].vue",
     "isDynamicEntry": true,
     "imports": [
